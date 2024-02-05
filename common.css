@@ -1,0 +1,42 @@
+/* .card {
+    --bs-card-spacer-y: 8rem;
+    --bs-card-spacer-x: 3rem;} */
+    .card {
+        --bs-card-spacer-y: 3rem;
+        --bs-card-spacer-x: 3rem;}
+body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh; 
+        background: linear-gradient(
+            to bottom,
+            rgb(236, 9, 176) 0%,
+            rgba(212, 64, 218, 0.8) 40%,
+           
+            rgba(52, 152, 219, 1) 60%,
+            rgba(79, 2, 221, 0.6) 100%
+            
+                
+            
+        );
+    }
+
+    
+    .content {
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+        font-size: 24px;
+    }
+    .btn{
+        background-color:   rgb(236, 9, 176);
+        border: 2px solid  rgb(236, 9, 176) ;
+    }
+    
+    
+    .page1_next{
+        
+        height: 10vh;
+        width: 10vh;
+    }
