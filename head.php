@@ -26,7 +26,7 @@
 
                      <h1 class="text-center mb-3 ">SignUP Form</h1>
                         <div class="text-center">
-                          <!-- code start here -->
+                          <!-- code start here  icons-->
 
                           <!-- icon code start -->
                           <div class="icons">
@@ -248,7 +248,7 @@ function changeImage() {
                     type: "POST",
                     data: { input1:firstname,input2:lastname,input3:email,input4:phone,input5:date,input6:gender,input7:username,input8:password, },
                     success: function(response) {
-                        alert("Data successfully saved: " + response);
+                        alert("Thank you!" + response);
                     },
                     error: function(xhr, status, error) {
                         alert("Error: " + status + "\nMessage: " + error);

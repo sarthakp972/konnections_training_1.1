@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Perform any necessary processing with the received data
     // For demonstration purposes, we'll simply return a response
-    $response = "Data saved successfully:\nInput 1:  $firstname\nInput 2:  $lastname";
+    $response = "Your form has been successfully submitted. ,";
 
     echo $response;
 
