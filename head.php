@@ -15,16 +15,17 @@
  
   </head>
 <body>
- 
+
 
 
       <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
            <div class="card">
                 <div class="card-body">
-  
+
+               
 
 
-                     <h1 class="text-center mb-3 ">SignUP Form</h1>
+                     <h1 class="text-center mb-3 "><b> Signup Form</b></h1>
                         <div class="text-center">
                           <!-- code start here  icons-->
 
@@ -93,12 +94,24 @@
     
         <script type=text/javascript>
             function nextPhase() {
-            $("#phase1").hide();
+
+              const firstname = document.getElementById('firstname').value;
+              const lastname = document.getElementById('lastname').value;
+                 console.log(firstname.length);
+                 console.log(lastname.length);
+                  const digitRegex = /\d/;
+                
+            
+
+                if (firstname.length >= 3 && lastname.length >= 3 && !(digitRegex.test(firstname) || digitRegex.test(lastname))){
+
+                  console.log("if")
+                  $("#phase1").hide();
             $("#phase2").show();
             $("#phase3").hide();
             $("#phase4").hide();
             changeImage();
-
+                
             /////////////////////////
             // icon-1 code
             function changeImage() {
@@ -112,15 +125,25 @@
             
               imageElement.setAttribute("alt", "New Image Alt Text");
               var element = document.querySelector('.line_comma1::before');
-                
+            }  
+  
+                             }
+
+                else{
+                  // var alertElement = document.getElementById("alert");
+                  //    alertElement.innerHTML = ".";
+                  alert("Length of the string should be at least 3 for both first name and last name , you can not put any number" )
+
+                  
+          // icon-1 code
             
         
-           
-
-
-              
-              // icon-1 code
           }
+
+
+            
+             
+          
         }
         function next1() {
 
@@ -132,11 +155,17 @@
 
             var inputString =  $("#email").val();
             var characterToFind = "@" && ".";
+            var  phoneNumber = $("#phone").val();
+            phoneNumber = phoneNumber.replace(/\D/g, '');
+
+// Check if the phone number has exactly 10 digits
+
+ 
 
 
 
 //////////////////////////////////////////////////////////////////////
-if (doesCharacterExist(inputString, characterToFind)) {
+if (doesCharacterExist(inputString, characterToFind) && phoneNumber.length === 10  ) {
     console.log("@ & . exists in the string.");
 
             $("#phase2").hide();
@@ -163,30 +192,75 @@ if (doesCharacterExist(inputString, characterToFind)) {
       }//if character exixt
       else{
         
-     alert("please enter a valid email");
+     alert("please enter a valid email and the phone number has exactly 10 digits");
             
           
       }//else part end
       }    
         function previousPhase1() {
+          //////////////////////////img pre
+          changeImage();
+          function changeImage() {
+              
+              var imageElement = document.getElementById("myImage");
+              var newSrc = "icon_number/circle-1.png";
+              imageElement.setAttribute("src", newSrc);
+              imageElement.setAttribute("alt", "New Image Alt Text");
+            }  
+///////////////////////////////////////////end pre
             $("#phase2").hide();
             $("#phase1").show();
             $("#phase3").hide();
             $("#phase4").hide();
         }
         function previousPhase2() {
+            //////////////////////////img pre
+            changeImage();
+          function changeImage() {
+              
+              var imageElement = document.getElementById("myImage2");
+              var newSrc = "icon_number/circle-2.png";
+              imageElement.setAttribute("src", newSrc);
+              imageElement.setAttribute("alt", "New Image Alt Text");
+            }  
+///////////////////////////////////////////end pre
+
             $("#phase2").show();
             $("#phase1").hide();
             $("#phase3").hide();
             $("#phase4").hide();
         }
         function previousPhase3() {
+            //////////////////////////img pre
+            changeImage();
+          function changeImage() {
+              
+              var imageElement = document.getElementById("myImage3");
+              var newSrc = "icon_number/circle-3.png";
+              imageElement.setAttribute("src", newSrc);
+              imageElement.setAttribute("alt", "New Image Alt Text");
+            }  
+///////////////////////////////////////////end pre
             $("#phase2").hide();
             $("#phase1").hide();
             $("#phase3").show();
             $("#phase4").hide();
         }
+            //////////////////////////////////////////////////////////////
         function next2() {
+      
+
+          var inputDate = $("#date").val();
+          var currentDate = new Date().toISOString().split('T')[0];
+                var gender = $("#gender").val();
+                if(gender===''|| gender==='Select Gender'|| inputDate > currentDate || inputDate===''){
+                    alert("Gender is req and Date of birth cannot be in the future")
+                }
+                else{
+
+                
+
+
             $("#phase2").hide();
             $("#phase3").hide();
             $("#phase1").hide();
@@ -206,12 +280,27 @@ function changeImage() {
 
   imageElement.setAttribute("alt", "New Image Alt Text");
 }
+                }//else part
         }
     
-     ////////////////////////////////
+     ////////////////////////////////subit form function///////////////////////////////
+
+
       console.log('pk');
+
             function submitForm() {
+
+              let username_valid = $("#username").val();
+                let password_valid = $("#password").val();
+        if (password_valid.length < 8 || password_valid.length > 20 || username_valid ==='') {
+        alert('Username is required  and Password must be between 8 to 20 characters');
+      }
+       else {
+        
+    
+
               /*image change*/
+
               changeImage()
               function changeImage() {
   
@@ -254,7 +343,9 @@ function changeImage() {
                         alert("Error: " + status + "\nMessage: " + error);
                     }
                 });
-            }
+            }//else part
+
+          }
         </script>
 
 

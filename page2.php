@@ -19,8 +19,8 @@
         </div>
 
             <div class="mb-3">
-                  <label for="Phone" class="form-label">Phone</label>
-                   <input type="text" class="form-control" id="lastname">
+                  <label for="phone" class="form-label">Phone Number</label>
+                   <input type="tel" class="form-control" id="phone" pattern="[0-9]{10}" required>  
              </div>
  
   <button  onclick="previousPhase1()" class="btn btn-primary">Previous</button>

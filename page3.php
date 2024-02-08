@@ -15,13 +15,13 @@
       </div>
        <div class="mb-3">
          <label for="date" class="form-label">Date of birth</label>
-         <input type="date" class="form-control" id="date">
+         <input type="date" class="form-control" id="date" required>
    
         </div>
 
         <div class="mb-3">
                 <label for="gender">Gender:</label>
-                <select class="form-control" id="gender" name="gender">
+                <select class="form-control" id="gender" name="gender" required>
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>

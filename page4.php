@@ -14,13 +14,13 @@
       </div>
        <div class="mb-3">
          <label for="username" class="form-label">User name</label>
-         <input type="username" class="form-control" id="username">
+         <input type="username" class="form-control" id="username" required>
    
         </div>
 
         <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password">
+        <input type="password" class="form-control" id="password" required>
       </div>
  
   <button  onclick="previousPhase3()" class="btn btn-primary">Previous</button>

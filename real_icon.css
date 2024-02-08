@@ -27,7 +27,7 @@ img{
     position: absolute;
     top: 139.5px;
     /* right: 26px; */
-    left: 36px;
+    left: 39px;
     z-index: 2;}
 
     .line_comma2::before {
@@ -38,7 +38,7 @@ img{
         position: absolute;
         top: 154.5px;
         /* right: 26px; */
-        left: 150px;
+        left: 154px;
         z-index: 2;}
         
         .line_comma3::before {
@@ -49,7 +49,7 @@ img{
             position: absolute;
             top: 155px;
             /* right: 26px; */
-            left: 210px;
+            left: 216px;
             z-index: 2;}
 
         

@@ -18,12 +18,12 @@
   <div class="flex justify-content-start">
     <label for="firstname" class="form-label">First Name</label>
 </div>
-    <input type="text" class="form-control" name="firstname" id="firstname">
+    <input type="text"  class="form-control" name="firstname" id="firstname">
     <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
   </div>
 
   <div class="mb-3">
-    <label for="lastname" class="form-label">Last Name</label>
+    <label for="lastname" class="form-label" >Last Name</label>
     <input type="text" class="form-control" name="lastname" id="lastname">
   </div>
  
